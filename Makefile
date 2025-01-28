@@ -8,3 +8,6 @@ exec:
 
 down:
 	docker compose -f ./docker/compose.yaml down
+
+remove:
+	docker compose -f ./docker/compose.yaml down --rmi all --volumes
