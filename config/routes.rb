@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   get 'hello/index', to: 'hello#index'
+  get 'hello/view'
 end
