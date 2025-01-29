@@ -16,11 +16,8 @@ RUN curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
 # sqlite3 のインストール
 RUN apt-get update -qq && apt-get install -y sqlite3 libsqlite3-dev
 
-# GemfileとGemfile.lockをコピー
-COPY ./Gemfile ./Gemfile.lock ./
-
-# 依存関係をインストール
-RUN bundle install
+# rails のインストール
+RUN gem install rails -v 7.2.1
 
 # アプリケーションのソースコードをコピー
 COPY . .
