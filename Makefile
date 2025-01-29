@@ -11,3 +11,6 @@ down:
 
 remove:
 	docker compose -f ./docker/compose.yaml down --rmi all --volumes
+
+server:
+	rails server -b 0.0.0.0
